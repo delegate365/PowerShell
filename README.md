@@ -39,8 +39,8 @@ Then, you can use the cmdlets as in this sample.
 Get-AadUsers -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl | select Id
 ```
 
-The Delegate365 cmdlets will give you access to data that is assigned to your user and the assigned OU's. This means, you will get filtered data by OU by default, you can only access you OU data.
-If you your user is assigned to a permission policy with PowerShell Admin permissions, no filter is set and you can access all data regardless of the OU's. Pls. ask your Delegate365 Portal Admin to check or to modify the permissions if needed.
+The Delegate365 cmdlets will give you access to data that is assigned to your user and the assigned OU's. You will get filtered data by OU by default, you can only access your OU data, e.g. users or groups in specific OU's.
+If you your user is assigned to a permission policy with PowerShell Admin permissions, no filter is set and you can access all data regardless of the OU's. Pls. ask your Delegate365 Portal Admin to check or to modify the permissions if needed in the Delegate365 web portal.
 
 ## EXAMPLES
 
