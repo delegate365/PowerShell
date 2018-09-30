@@ -12,7 +12,7 @@ These cmdlets allow to read and write data from external systems into Delegate36
 ## BASIC SYNTAX
 
 ```
-Get-AadUsers -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl
+Get-AadUsers -WebApiSasKey "mykey1234567890" -WebApiBaseUrl "https://contoso.delegate365.com]/api/"
 ```
 
 ## DESCRIPTION
