@@ -29,11 +29,12 @@ $modulePath = $basePath + '\bin\Debug\netstandard2.0\Delegate365.Api.Client.dll'
 
 Import-Module $modulePath
 
-$baseUrl = "https://[<your company name>.delegate365.com]/api/"
+$baseUrl = "https://[<your company name>].delegate365.com/api/"
 $apiKey = "[<your administrator's API key>]"
 ```
 
 Then, you can use the cmdlets as in this sample.
+If your organization is using a custom certificate, user your own Delegate365 web portal URL as https://delegate365.conotos.com/api/.
 
 ```
 Get-AadUsers -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl | select Id
