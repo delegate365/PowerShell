@@ -1,5 +1,6 @@
-# PowerShell
+# Delegate365 PowerShell
 PowerShell cmdlets and info for Delegate365.
+
 Important: These cmdlets are available starting with Delegate365 v8.2.
 
 ## SYNOPSIS
@@ -48,7 +49,7 @@ If you your user is assigned to a permission policy with PowerShell Admin permis
 Get-AadUsers -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl | select Id
 ```
 
-This example returns all users.
+This example returns all users the Delegate365 admin user can manage, based on his permission set.
 
 ## PARAMETERS
 
