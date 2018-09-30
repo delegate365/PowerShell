@@ -19,13 +19,7 @@ Get-AadUsers -WebApiSasKey "mykey1234567890" -WebApiBaseUrl "https://contoso.del
 The Delegate365 module must be downloaded and installed on the client machine. Delegate365.Api.Client.dll is a .NET standard 2.0 library that can be used on that platform. Once downloaded, reference to the module in your PowerShell scripts as here.
 
 ```
-$basePath = $PSScriptRoot
-if ([string]::IsNullOrEmpty($basePath))
-{
-    $basePath = Split-Path -parent $psISE.CurrentFile.Fullpath
-}
-
-$modulePath = $basePath + '\bin\Debug\netstandard2.0\Delegate365.Api.Client.dll'
+$modulePath = 'C:\Delegate365\Delegate365.Api.Client.dll'
 
 Import-Module $modulePath
 
