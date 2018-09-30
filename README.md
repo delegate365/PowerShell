@@ -10,8 +10,7 @@ These cmdlets allow to read and write data from external systems into Delegate36
 ## BASIC SYNTAX
 
 ```
-Disable-CmdletExtensionAgent [-Identity] <CmdletExtensionAgentIdParameter> [-Confirm]
- [-DomainController <Fqdn>] [-WhatIf] [<CommonParameters>]
+Get-AadUsers -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl
 ```
 
 ## DESCRIPTION
