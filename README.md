@@ -20,7 +20,6 @@ The Delegate365 module must be downloaded and installed on the client machine. D
 
 ```
 $modulePath = 'C:\Delegate365\Delegate365.Api.Client.dll'
-
 Import-Module $modulePath
 
 $baseUrl = "https://[<your company name>].delegate365.com/api/"
