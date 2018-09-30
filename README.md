@@ -1,8 +1,9 @@
 # PowerShell
-PowerShell cmdlets and info for Delegate365 v8.2
+PowerShell cmdlets and info for Delegate365.
+Important: These cmdlets are available starting with Delegate365 v8.2.
 
 ## SYNOPSIS
-Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution for managing an Office 365 tenant offered by (https://www.atwork-it.com/). Delegate365 allows to split a single Office 365 tenant into smaller, manageable units. For more information about Delegate365, pls. see (https://www.delegate365.com/).
+Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution for managing an Office 365 tenant offered by [atwork-it.com](https://www.atwork-it.com/). Delegate365 allows to split a single Office 365 tenant into smaller, manageable units. For more information about Delegate365, pls. see [delegate365.com](https://www.delegate365.com/).
 
 Delegate365 provides APIs and a PowerShell module to access data that is stored within the Delegate365 system.
 These cmdlets allow to read and write data from external systems into Delegate365.
@@ -55,9 +56,7 @@ This example returns all users.
 This key must be provided for each Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
 
 ### -WebApiBaseUrl
-This is the base URL of your Delegate365 web portal with the API method appended, e.g. https://contoso.delegate365.com/api/
-
-This parameter is required as well to address the corresponding API and must not be omitted.
+This is the base URL of your Delegate365 web portal with the API method appended, e.g. https://contoso.delegate365.com/api/. This parameter is required as well to address the corresponding API and must not be omitted.
 
 ## OUTPUTS
 
@@ -65,5 +64,5 @@ This parameter is required as well to address the corresponding API and must not
 The cmdlets return data in a structured form. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank, the cmdlet doesn't return any data.
 
 ## NOTES
-In case of questions pls. check out the Delegate365 blog at (http://blog.atwork.at/category/Delegate365) or contact (https://www.atwork-it.com/).
+In case of questions pls. check out the Delegate365 blog at [Delegate365 blog](http://blog.atwork.at/category/Delegate365) or contact [atwork-it.com](https://www.atwork-it.com/).
 
