@@ -46,7 +46,7 @@ If you your user is assigned to a permission policy with PowerShell Admin permis
 
 ### -------------------------- Example 1 --------------------------
 ```
-Get-AadUsers -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl | select Id
+Get-AadUsers -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl | select UserPrincipalName,Id
 ```
 
 This example returns all users the Delegate365 admin user can manage, based on his permission set.
