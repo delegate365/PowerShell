@@ -11,8 +11,8 @@ These cmdlets allow to read and write data from external systems into Delegate36
 
 ## DESCRIPTION
 The Delegate365 module must be downloaded and installed from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. Once installed on a client machine, use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards.
-Use ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command.
-All Delegate365 commands have a "D"-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser](Get-DUser.md). [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
+Use ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command and 
+***Get-Help command-name -examples*** for samples how to use a command. All Delegate365 commands have a "D"-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser ...](Get-DUser.md). [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
 
 ## BASIC USAGE
 ```
@@ -42,7 +42,7 @@ If you your user is assigned to a permission policy with PowerShell Admin permis
 Get-AadUsers -all | select UserPrincipalName, Id
 ```
 This example returns all users the Delegate365 admin user can manage, based on his permission set.
-The cmdlets return data in a structured form. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank, the cmdlet doesn't return any data.
+The cmdlets return data in a structured form. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank and the cmdlet doesn't return any data.
 
 ## NOTES
 Pls. check out the functionality and parameters of each command in the corresponding description file. Of course, you can combine the Delegate365 Powershell module with other modules. In case of questions pls. check out the Delegate365 blog at [Delegate365 blog](http://blog.atwork.at/category/Delegate365) or contact [atwork-it.com](https://www.atwork-it.com/).

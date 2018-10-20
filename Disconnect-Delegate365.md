@@ -14,4 +14,4 @@ Disconnect-Delegate365
 ```
 Disconnects from your Delegate365 API.
 
-Back to the [overview](https://github.com/delegate365/PowerShell)
+Back to the [overview](https://github.com/delegate365/PowerShell).
