@@ -22,7 +22,7 @@ By default, the command returns the first 100 assigned users.
 _WARNING: Result is limited to 100 items. Use the -All parameter to get all users._
 
 | Id | Identity | UserPrincipalName | DisplayName | OrganizationalUnit
-| ---:|:--------:|:----------------- |:-----------|:------------------
+| ---:|:--------|:----------------- |:-----------|:------------------
 | 1 | 8f5e906f-7f5d-46e2-bfd8-3b0cf4368861 | AdamW@M365x737430.onmicrosoft.com | Adam Wallen | Seattle
 | 2 | d46974ab-bede-408c-bf59-6dccc9a65722 | AdeleV@M365x737430.onmicrosoft.com | Adele Vance | Seattle
 | 3 | e080876a-31c0-47c8-9d96-a96c6f140ff3 | AlexW@M365x737430.onmicrosoft.com | Alex Wilber | Seattle
