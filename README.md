@@ -1,7 +1,6 @@
 # Delegate365 PowerShell
-PowerShell cmdlets and info for Delegate365.
-
-Important: These cmdlets are available starting with Delegate365 v8.1.
+Description of the PowerShell cmdlets for Delegate365.
+Important: These cmdlets are available starting with ***Delegate365 v8.1***.
 
 ## SYNOPSIS
 Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution for managing an Office 365 tenant offered by [atwork-it.com](https://www.atwork-it.com/). Delegate365 allows to split a single Office 365 tenant into smaller, manageable units. For more information about Delegate365, pls. see [delegate365.com](https://www.delegate365.com/).
