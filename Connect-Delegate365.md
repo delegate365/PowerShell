@@ -35,4 +35,4 @@ This key must be provided at the Connect-Delegate365 cmdlet to identify your use
 ### -WebApiBaseUrl
 This is the base URL of your Delegate365 web portal, e.g. https://contoso.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
 
-Back to the [overview](/)
+Back to the [overview](https://github.com/delegate365/PowerShell)

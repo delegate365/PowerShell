@@ -45,5 +45,4 @@ The cmdlets return data in a structured form. You can work with the result as us
 ## NOTES
 Pls. check out the functionality and parameters of each command in the corresponding description file. Of course, you can combine the Delegate365 Powershell module with other modules. In case of questions pls. check out the Delegate365 blog at [Delegate365 blog](http://blog.atwork.at/category/Delegate365) or contact [atwork-it.com](https://www.atwork-it.com/).
 
-***Happy automating with Delegate365!***
-
+***Happy automating with [delegate365.com](https://www.delegate365.com/)!***
