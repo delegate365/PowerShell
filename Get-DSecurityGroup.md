@@ -18,6 +18,7 @@ By default, the command returns the first 100 assigned security groups.
 
 ## Output
 _WARNING: Result is limited to 100 items. Use the -All parameter to get all security groups._
+
 | Id | Identity | GroupName | OrganizationalUnit |
 | ---:| -------- | --------- | ------------------ |
 | 1 | 8e511639-4e41-45e9-83e9-46a5c53a068a | sg-Engineering | Seattle |
