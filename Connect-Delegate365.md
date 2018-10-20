@@ -7,19 +7,19 @@ Connects to the API in Delegate365.
 Connect-Delegate365 connects to the API in Delegate365.
 Use this command to connect to your Delegate365 tenant at the beginning of any PowerShell commands or scripts.
 This command requires a WebApiBaseUrl and a WebApiSasKey parameter.
-The ***WebApiBaseUrl*** is the URI of your Delegate365 tenant, as https://<mycompany>.delegate365.com.
+The ***WebApiBaseUrl*** is the URI of your Delegate365 tenant, as https://mycompany.delegate365.com.
 The ***WebApiSasKey*** must be provided by your Delegate365 Portal Admin. It's a key that identifies your admin account and is specific for your use.
 The key is a string as "123456..". Keep this key well and do not hand it over to other persons, it's your personal access to the API.
 As output, an informational string is returned. If no error occurs, it should respond with "successfully connected" within some seconds.
 
 After a successful connection is established, you can start working with the Delegate365 cmdlets. 
-Use ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help <command>*** for information about a specific command.
+Use ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command.
 Afterwards, use [Disconnect-Delegate365](Disconnect-Delegate365.md) to close the connection.
 
 ## Example
 ```powershell
-$apiKey = '123456...'
-$baseUrl = 'https://mycompany.delegate365.com'
+$apiKey = '<123456...>'
+$baseUrl = 'https://<mycompany>.delegate365.com'
 
 Connect-Delegate365 -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl
 ```

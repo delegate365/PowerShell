@@ -10,7 +10,9 @@ Delegate365 provides APIs and a PowerShell module to access data that is stored 
 These cmdlets allow to read and write data from external systems into Delegate365.
 
 ## DESCRIPTION
-The Delegate365 module must be downloaded and installed from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. Once installed on a client machine, use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards. [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
+The Delegate365 module must be downloaded and installed from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. Once installed on a client machine, use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards.
+Use ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command.
+All Delegate365 commands have a "D"-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser](Get-DUser.md). [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
 
 ## BASIC USAGE
 ```
