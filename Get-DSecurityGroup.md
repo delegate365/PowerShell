@@ -13,18 +13,18 @@ The output shows the most essential properties for each security group.
 ## Example
 ```powershell
 Get-DSecurityGroup
+```
+By default, the command returns the first 100 assigned security groups.
 
+## Output
 _WARNING: Result is limited to 100 items. Use the -All parameter to get all security groups._
-
 | Id | Identity | GroupName | OrganizationalUnit |
-| --- |:--------:|:---------:|:------------------ |
+| ---:| -------- | --------- | ------------------ |
 | 1 | 8e511639-4e41-45e9-83e9-46a5c53a068a | sg-Engineering | Seattle |
 | 2 | 0420e126-4078-41a1-9712-4087e9f2445d | sg-Executive | Seattle |
 | 3 | d9ab3a91-da1c-4148-85bb-b1a696476194 | sg-Finance | Seattle |
 | 4 | e20238ea-8374-4339-bf4d-d91d815a5b56 | sg-HR | Seattle |
 | 5 | 3307eb0a-ecd1-4136-bb15-286b21682dbd | sg-IT | Seattle |
-```
-By default, the command returns the first 100 assigned security groups.
 
 ## Example
 ```powershell
