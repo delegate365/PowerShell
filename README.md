@@ -39,7 +39,7 @@ If you your user is assigned to a permission policy with PowerShell Admin permis
 
 ## EXAMPLE
 ```
-Get-AadUsers -all | select UserPrincipalName, Id
+Get-DUsers -All | Select UserPrincipalName, Id
 ```
 This example returns all users the Delegate365 admin user can manage, based on his permission set.
 The cmdlets return data in a structured form. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank and the cmdlet doesn't return any data.
