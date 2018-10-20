@@ -1,5 +1,6 @@
 # Delegate365 PowerShell
 Description of the PowerShell cmdlets for Delegate365.
+
 Important: These cmdlets are available starting with ***Delegate365 v8.1***.
 
 ## SYNOPSIS
@@ -22,7 +23,7 @@ $apiKey = "<your administrator's API key>"
 
 Connect-Delegate365 -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl
 
-Get-AadUsers
+Get-DUsers -OU 'Seattle'
 
 Disconnect-Delegate365
 ```
