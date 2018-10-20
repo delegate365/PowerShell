@@ -10,7 +10,7 @@ Delegate365 provides APIs and a PowerShell module to access data that is stored 
 These cmdlets allow to read and write data from external systems into Delegate365.
 
 ## DESCRIPTION
-The Delegate365 module must be downloaded and installed from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. Once installed on a client machine, use the ***Connect-Delegate365*** command to connect to your Delegate365 instance and use the cmdlets afterwards. ***Disconnect-Delegate365*** closes the connection.
+The Delegate365 module must be downloaded and installed from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. Once installed on a client machine, use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards. [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
 
 ## BASIC USAGE
 ```
@@ -27,10 +27,10 @@ Disconnect-Delegate365
 ```
 
 ### -WebApiSasKey
-This key must be provided for each Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
+This key must be provided at the Connect-Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
 
 ### -WebApiBaseUrl
-This is the base URL of your Delegate365 web portal with the API method appended, e.g. https://contoso.delegate365.com/api/. This parameter is required as well to address the corresponding API and must not be omitted.
+This is the base URL of your Delegate365 web portal, e.g. https://contoso.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
 
 The Delegate365 cmdlets will give you access to data that is assigned to your user and the assigned OU's. You will get filtered data by OU by default, you can only access your OU data, e.g. users or groups in specific OU's.
 If you your user is assigned to a permission policy with PowerShell Admin permissions, no filter is set and you can access all data regardless of the OU's. Pls. ask your Delegate365 Portal Admin to check or to modify the permissions if needed in the Delegate365 web portal.
