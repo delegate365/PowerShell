@@ -19,7 +19,7 @@ Once installed on a client machine, the Delegate365 commandlets can be used.
 
 ## Connect
 Use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards.
-Execute ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command. Add -Examples as ***Get-Help command-name -examples*** for samples how to use a specific command. All Delegate365 commands have a "D"-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser](Get-DUser.md) for ***Get-D***elegate365***User**. [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
+Execute ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command. Add -Examples as ***Get-Help command-name -examples*** for samples how to use a specific command. All Delegate365 commands have a "D"-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser](Get-DUser.md) for **Get-D**elegate365**User**. [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
 
 ## Basic usage
 ```powershell
