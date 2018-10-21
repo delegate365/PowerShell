@@ -36,6 +36,6 @@ Also, the admin must set active in the administrator's list, otherwise the API b
 ### Parameter -WebApiSasKey
 This key must be provided at the Connect-Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
 ### Parameter -WebApiBaseUrl
-This is the base URL of your Delegate365 web portal, e.g. https://contoso.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
+This is the base URL of your Delegate365 web portal, e.g. https://mycompany.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
 
 Back to the [overview](https://github.com/delegate365/PowerShell).
