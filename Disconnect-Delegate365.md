@@ -12,6 +12,6 @@ Thanks for using Delegate365!
 ```powershell
 Disconnect-Delegate365
 ```
-Disconnects from your Delegate365 API.
+Disconnects from your Delegate365 API. There are no parameters.
 
 Back to the [overview](https://github.com/delegate365/PowerShell).

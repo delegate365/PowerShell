@@ -18,6 +18,6 @@ For filling new license quotas for all OU's and licenses with a quota value of 0
 The created quotas and their values should then be modified as needed.
 
 ## Parameter Description
-### There are no parameters
+There are no parameters.
 
 Back to the [overview](https://github.com/delegate365/PowerShell).

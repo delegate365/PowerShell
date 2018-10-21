@@ -18,6 +18,6 @@ Start-DMFASync
 Start the MFA sync now.
 
 ## Parameter Description
-### There are no parameters
+There are no parameters.
 
 Back to the [overview](https://github.com/delegate365/PowerShell).
