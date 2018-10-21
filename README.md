@@ -39,23 +39,24 @@ Get-DUsers -OU 'Seattle'
 Disconnect-Delegate365
 ```
 
-### -WebApiSasKey
-This key must be provided at the Connect-Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
+### Connect-Delegate365 -WebApiSasKey and -WebApiBaseUrl
+The WebApiSasKey must be provided at the Connect-Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
 
-### -WebApiBaseUrl
-This is the base URL of your Delegate365 web portal, e.g. https://contoso.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
+The WebApiBaseUrl is the base URL of your Delegate365 web portal, e.g. https://contoso.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
 
+### Access is based on permissions
 The Delegate365 cmdlets will give you access to data that is assigned to your user and the assigned OU's. You will get filtered data by OU by default, you can only access your OU data, e.g. users or groups in specific OU's.
 If you your user is assigned to a permission policy with PowerShell Admin permissions, no filter is set and you can access all data regardless of the OU's. Pls. ask your Delegate365 Portal Admin to check or to modify the permissions if needed in the Delegate365 web portal.
 
-## EXAMPLE
-```
+### Full PowerShell support
+The Delegate365 commandlets work just like you are used to work with PowerShell. This example returns all users the Delegate365 admin user can manage, based on his permission set. The output is sent to the Select method to show only two properties.
+
+```powershell
 Get-DUsers -All | Select UserPrincipalName, Id
 ```
-This example returns all users the Delegate365 admin user can manage, based on his permission set.
 The cmdlets return data in a structured form. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank and the cmdlet doesn't return any data.
 
-## NOTES
+## Notes
 Pls. check out the functionality and parameters of each command in the corresponding description file. Of course, you can combine the Delegate365 Powershell module with other modules. In case of questions pls. check out the Delegate365 blog at [Delegate365 blog](http://blog.atwork.at/category/Delegate365) or contact [atwork-it.com](https://www.atwork-it.com/).
 
 ***Happy automating with [delegate365.com](https://www.delegate365.com/)!***
