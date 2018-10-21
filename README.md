@@ -33,7 +33,7 @@ $apiKey = "<your administrator's API key>"
 Connect-Delegate365 -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl
 
 # Run commands
-Get-DUsers -OU 'Seattle'
+Get-DUser -OU 'Seattle'
 
 # Close the session
 Disconnect-Delegate365
