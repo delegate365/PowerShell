@@ -56,13 +56,13 @@ The Delegate365 commandlets work just like you are used to work with PowerShell.
 Get-DUser | ft
 
 # Get all users and show only two properties
-Get-DUsers -All | Select Id, UserPrincipalName
+Get-DUser -All | Select Id, UserPrincipalName
 
 # Export all users to a CSV file
 Get-DUser -All | export-csv .\dusers.csv -NoTypeInformation
 
 # Get one specific user
-$u = 'NestorW@M365x737430.OnMicrosoft.com'
+$u = 'NestorW@M365x737430.onmicrosoft.com'
 Get-DUser -Identity $u | ft
 ```
 The Delegate365 cmdlets return data in a structured form as objects. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank and the cmdlet doesn't return any data.
