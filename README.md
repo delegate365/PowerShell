@@ -3,28 +3,39 @@ Description of the PowerShell cmdlets for Delegate365.
 
 Important: These cmdlets are available starting with ***Delegate365 v8.1***.
 
-## SYNOPSIS
+## Synopsis
 Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution for managing an Office 365 tenant offered by [atwork-it.com](https://www.atwork-it.com/). Delegate365 allows to split a single Office 365 tenant into smaller, manageable units. For more information about Delegate365, pls. see [delegate365.com](https://www.delegate365.com/).
 
 Delegate365 provides APIs and a PowerShell module to access data that is stored within the Delegate365 system.
 These cmdlets allow to read and write data from external systems into Delegate365.
 
-## DESCRIPTION
-The Delegate365 module must be downloaded and installed from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. Once installed on a client machine, use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards.
-Use ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command and 
-***Get-Help command-name -examples*** for samples how to use a command. All Delegate365 commands have a "D"-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser ...](Get-DUser.md). [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
+## Installation
+The Delegate365 module must be downloaded and installed once on a client computer from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. To overwrite an existing Delegate365 PowerShell module with the latest version, add the -Force parameter.
 
-## BASIC USAGE
+```powershell
+Install-Module Delegate365 -Force
 ```
+Once installed on a client machine, the Delegate365 commandlets can be used.
+
+## Connect
+Use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards.
+Execute ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command. Add -Examples as ***Get-Help command-name -examples*** for samples how to use a specific command. All Delegate365 commands have a "D"-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser](Get-DUser.md). [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
+
+## Basic usage
+```powershell
+# Ensure that the module is loaded
 Import-Module Delegate365
 
+# Connect to your Delegate365 instance
 $baseUrl = "https://<your company name>.delegate365.com"
 $apiKey = "<your administrator's API key>"
 
 Connect-Delegate365 -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl
 
+# Run commands
 Get-DUsers -OU 'Seattle'
 
+# Close the session
 Disconnect-Delegate365
 ```
 
