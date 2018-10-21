@@ -49,12 +49,23 @@ The Delegate365 cmdlets will give you access to data that is assigned to your us
 If you your user is assigned to a permission policy with PowerShell Admin permissions, no filter is set and you can access all data regardless of the OU's. Pls. ask your Delegate365 Portal Admin to check or to modify the permissions if needed in the Delegate365 web portal.
 
 ### Full PowerShell support
-The Delegate365 commandlets work just like you are used to work with PowerShell. This example returns all users the Delegate365 admin user can manage, based on his permission set. The output is sent to the Select method to show only two properties.
+The Delegate365 commandlets work just like you are used to work with PowerShell. These examples return the users the Delegate365 admin user can manage, based on his permission set and the applied PowerShell methods.
 
 ```powershell
-Get-DUsers -All | Select UserPrincipalName, Id
+# Get users and format the output as table
+Get-DUser | ft
+
+# Get all users and show only two properties
+Get-DUsers -All | Select Id, UserPrincipalName
+
+# Export all users to a CSV file
+Get-DUser -All | export-csv .\dusers.csv -NoTypeInformation
+
+# Get one specific user
+$u = 'NestorW@M365x737430.OnMicrosoft.com'
+Get-DUser -Identity $u | ft
 ```
-The cmdlets return data in a structured form. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank and the cmdlet doesn't return any data.
+The Delegate365 cmdlets return data in a structured form as objects. You can work with the result as usual and pipe it to variables, files, etc. If no data is found, the output is blank and the cmdlet doesn't return any data.
 
 ## Notes
 Pls. check out the functionality and parameters of each command in the corresponding description file. Of course, you can combine the Delegate365 Powershell module with other modules. In case of questions pls. check out the Delegate365 blog at [Delegate365 blog](http://blog.atwork.at/category/Delegate365) or contact [atwork-it.com](https://www.atwork-it.com/).
