@@ -18,10 +18,13 @@ Afterwards, use [Disconnect-Delegate365](Disconnect-Delegate365.md) to close the
 
 ## Example
 ```powershell
+# Connect to your Delegate365
 $apiKey = '<123456...>'
 $baseUrl = 'https://<mycompany>.delegate365.com'
 
 Connect-Delegate365 -WebApiSasKey $apiKey -WebApiBaseUrl $baseUrl
+
+# After a successful connection, use Delegate365 cmdlets...
 ```
 Creates a new session and connects to your Delegate365 API with your key and your portal-URL. Now, the Delegate635 commands can be used.
 

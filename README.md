@@ -40,9 +40,9 @@ Disconnect-Delegate365
 ```
 
 ### Connect-Delegate365 -WebApiSasKey and -WebApiBaseUrl
-The WebApiSasKey must be provided at the Connect-Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
+The _-WebApiSasKe_y must be provided at the Connect-Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
 
-The WebApiBaseUrl is the base URL of your Delegate365 web portal, e.g. https://contoso.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
+The _-WebApiBaseUrl_ is the base URL of your Delegate365 web portal, e.g. https://contoso.delegate365.com. This parameter is required as well to address the corresponding API and must not be omitted.
 
 ### Access is based on permissions
 The Delegate365 cmdlets will give you access to data that is assigned to your user and the assigned OU's. You will get filtered data by OU by default, you can only access your OU data, e.g. users or groups in specific OU's.
