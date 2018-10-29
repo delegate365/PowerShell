@@ -24,9 +24,9 @@ Add -All to get all items.
 
 ## Example
 ```powershell
-Get-DDomain -Identity 'Switzerland'
+Get-DDomain -Identity [Object-ID]
 ```
-Get one specific item by name or by ID.
+Get one specific item by by ID.
 
 ## Parameter Description
 ### Parameter -All

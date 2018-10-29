@@ -26,7 +26,7 @@ Add -All to get all permission policies.
 ```powershell
 Get-DPermission -Identity 'Scope Admins New York'
 ```
-Get one specific permission policy by name or by ID.
+Get one specific permission policy by name of the policy.
 
 ## Parameter Description
 ### Parameter -All

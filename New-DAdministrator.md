@@ -31,7 +31,7 @@ New-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
 -D365Permission 'Portal Admin'`
 -Settings $settings
 ```
-Additional parameters and settings can be set the new user in one step.
+Additional parameters and settings can be set the new user in one step. You can ssign multiple OUs and domains and separate them with a comma, as shown in this sample.
 
 ## Parameter Description
 ### Parameter -UserPrincipalName

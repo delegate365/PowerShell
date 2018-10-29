@@ -34,9 +34,9 @@ Add -All to get all licenses.
 
 ## Example
 ```powershell
-Get-DLicenses -Identity 'Enterprise Mobility + Security E5'
+Get-DLicenses -Identity [SKU-ID]
 ```
-Get one specific license by name or by ID.
+Get one specific license by ID.
 
 ## Parameter Description
 ### Parameter -All
