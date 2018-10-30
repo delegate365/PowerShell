@@ -1,7 +1,7 @@
 # Delegate365 PowerShell
 Description of the PowerShell cmdlets for Delegate365 (v1.0.0.6)
 
-Important: These cmdlets are available starting with ***Delegate365 v8.1***.
+***Important:*** These cmdlets are available starting with ***Delegate365 v8.1***.
 
 ## Synopsis
 Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution for managing an Office 365 tenant offered by [atwork-it.com](https://www.atwork-it.com/). Delegate365 allows to split a single Office 365 tenant into smaller, manageable units. For more information about Delegate365, pls. see [delegate365.com](https://www.delegate365.com/).
@@ -38,6 +38,16 @@ Get-DUser -OU 'Seattle'
 # Close the session
 Disconnect-Delegate365
 ```
+
+### Prerequisites
+If you run ***Import-Module Delegate365*** and you get an error similar as 'Import-Module : Could not load file or assembly 'netstandard, Version2.0.0.0. ...', the corresponding Microsoft .NET Framework might not be installed on the client machine. The Delegate365 PowerShell module requires .NET Standard 2.0 which is supported on the following platforms and higher:
+- .NET Framework 4.6.1
+- .NET Core 2.0
+- Mono 5.4
+- Xamarin.iOS 10.14
+- Xamarin.Mac 3.8
+- Xamarin.Android 7.5
+If one of these .NET Frameworks (or higher) is not installad on the client machine, pls. install the framework. For Windows machines, install the .NET Standard 2.0 Framework (.NET 4.7.2 runtime) from (https://www.microsoft.com/net/download/thank-you/net472). Once the required .NET Framework is installed, the Delegate365 module will load as expected. .NET Framework supports multiple versions installed on the same machine side-by-side.
 
 ### Connect-Delegate365 -WebApiSasKey and -WebApiBaseUrl
 The ***-WebApiSasKey*** must be provided at the Connect-Delegate365 cmdlet to identify your user and the permissions defined. The command will only return objects within you permission scope. The permissions can be set by the Portal Admins in the web portal.
