@@ -47,6 +47,7 @@ If you run ***Import-Module Delegate365*** and you get an error similar as 'Impo
 - Xamarin.iOS 10.14
 - Xamarin.Mac 3.8
 - Xamarin.Android 7.5
+
 If one of these .NET Frameworks (or higher) is not installad on the client machine, pls. install the framework. For Windows machines, install the .NET Standard 2.0 Framework (.NET 4.7.2 runtime) from (https://www.microsoft.com/net/download/thank-you/net472). Once the required .NET Framework is installed, the Delegate365 module will load as expected. .NET Framework supports multiple versions installed on the same machine side-by-side.
 
 ### Connect-Delegate365 -WebApiSasKey and -WebApiBaseUrl
