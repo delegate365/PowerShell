@@ -1,7 +1,7 @@
 # New-DAdministrator
 
 ## Synopsis
-Creates a new administrator in Delegate365.
+Creates a new administrator in Delegate365 (and optional assigns the administrator to OU's, domains and to a permission policy).
 
 ## Description
 New-DAdministrator creates a new administrator in Delegate365.
