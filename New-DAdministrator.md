@@ -28,7 +28,7 @@ $settings.DailyNotifications = $false
 New-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
 -OrganizationalUnits 'Paris,New York' `
 -Domains 'atwork-it.com,delegate365.com' `
--D365Permission 'Portal Admin'`
+-D365Permission 'Portal Admin' `
 -Settings $settings
 ```
 Additional parameters and settings can be set to the new user in one step. 
