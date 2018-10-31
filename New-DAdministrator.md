@@ -31,7 +31,8 @@ New-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
 -D365Permission 'Portal Admin'`
 -Settings $settings
 ```
-Additional parameters and settings can be set the new user in one step. You can assign multiple OUs and domains and separate them with a comma, as shown in this sample.
+Additional parameters and settings can be set to the new user in one step. 
+You can assign multiple OUs and domains and separate them with a comma, as shown in this sample. Here, the new admin is assigned to the OU's New York and Paris and for managing users of the domains atwork-it.com and delegate365.com. As Permission policy, the name of the policy must be used, here 'Portal Admin'. The defined settings are assigned by passing  the $settings object to the New-DAdministrator command.
 
 ## Parameter Description
 ### Parameter -UserPrincipalName
