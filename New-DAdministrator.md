@@ -32,7 +32,7 @@ New-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
 -Settings $settings
 ```
 Additional parameters and settings can be set to the new user in one step. 
-You can assign multiple OUs and domains and separate them with a comma, as shown in this sample. Here, the new admin is assigned to the OU's New York and Paris and for managing users of the domains atwork-it.com and delegate365.com. As Permission policy, the name of the policy must be used, here 'Portal Admin'. The defined settings are assigned by passing  the $settings object to the New-DAdministrator command.
+You can assign multiple OUs and domains and separate them with a comma, as shown in this sample. Here, the new admin is assigned to the OU's New York and Paris and for managing users of the domains atwork-it.com and delegate365.com. As Permission policy, the name of the policy must be used, here 'Portal Admin'. Note: Without permission policy, the admin has no permissions in Delegate365, so this parameter is important. The defined settings are assigned by passing the $settings object to the New-DAdministrator command.
 
 ## Parameter Description
 ### Parameter -UserPrincipalName
@@ -44,5 +44,6 @@ Domains is a string, that can be separated by comma, e.g. 'atwork-it.com,delegat
 ### Parameter -Settings
 Settings allow to set the notification email, phone number and other settings for the admin.
 ### Parameter -D365Permission
+Defines the permission policy to be assigned to that admin. Without permission policy, the admin has no permission in Delegate365.
 
 Back to the [overview](https://github.com/delegate365/PowerShell).
