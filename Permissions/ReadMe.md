@@ -26,4 +26,4 @@ The settings will be active instantly. Repeat the steps for all policies you req
 
 ***Note*** that you also find the Administrator's "WebAPIKey" here. This is the key that needs to be handed over to that Administrator to be able to use PowerShell. If the PowerShell access shall be disabled, simply generate a new WebAPIKey. Alternatively, the Admin can be deactivated (set "Active" to "No", then neither PowerShell nor the portal can be used), or deleted.
 
-Back to the [overview](../ReadMe.md).
+Back to the [overview](https://github.com/delegate365/PowerShell).
