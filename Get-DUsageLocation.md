@@ -27,6 +27,9 @@ Get-DUsageLocation -Identity 'Switzerland'
 ```
 Get one specific item by name or by ID.
 
+## Example
+See another sample at [Get-DUsageLocation-Sample.ps1](./Samples/Get-DUsageLocation-Sample.ps1).
+
 ## Parameter Description
 ### Parameter -All
 Delivers all items (and not only the first 100 items).

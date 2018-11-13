@@ -4,7 +4,11 @@
 Gets one or multiple users from Delegate365.
 
 ## Description
-Get-DUser returns a list of users from Delegate365.
+Get-DUser returns a list of users or a specific user from Delegate365.
+
+***Important:*** By default, the command shows all users that are assigned to any OU in Delegate365. 
+When using the -Unassigned parameter, all users are returned that are not assigned to an OU. Be aware that this parameter only delivers the unassigned users if the authenticated user is PowerShell Administrator. Scope Admins that are not PowerShell Administrator will see no output (an empty list), while PowerShell Administrators get all the unassigned users.
+
 In Delegate365, users can be managed by Scope Admins if they are assigned to an OU.
 Parameters allow to get all users, users of a specific OU, or unassigned users.
 By default, the first 100 users are returned. Use the -All parameter to get the full list of users. 
@@ -37,13 +41,13 @@ Add -All to get all users.
 ```powershell
 Get-DUser -Unassigned -All
 ```
-Add -Unassigned to get users that are NOT assigned to an OU (can be combined with -All).
+Add -Unassigned to get users that are NOT assigned to an OU (can be combined with -All). Requires the PowerShell Administration permission.
 
 ## Example
 ```powershell
-Get-DUser -OU Seattle
+Get-DUser -OU 'New York'
 ```
-Add -OU to get users that are assigned to a specific OU.
+Add -OU to get users that are assigned to a specific OU. There can only be one OU name used.
 
 ## Example
 ```powershell
@@ -53,12 +57,22 @@ Get one specific user by UPN or by ID.
 
 ## Parameter Description
 ### Parameter -Unassigned
-Delivers all users from Delegate365 that are not assigned to an OU.
+Delivers all users from Delegate365 that are not assigned to an OU. The PowerShell Administration permission is required for delivering an output.
 ### Parameter -All
 Delivers all users (and not only the first 100 users).
 ### Parameter -Identity
 Filter for one specific user. Wildcards are not supported, use the full UserPrincipalName or the ID.
 ### Parameter -OU
 Filter by the name of an OU.
+
+## Output
+The Output delivers the the most relevant user properties:
+```powershell
+Id                 : 20
+Identity           : f1234567-e321-d234-c678-b11234567890
+UserPrincipalName  : john.doe@delegate365.com
+DisplayName        : John Doe
+OrganizationalUnit : Seattle
+```
 
 Back to the [overview](https://github.com/delegate365/PowerShell).
