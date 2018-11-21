@@ -55,7 +55,7 @@ $settings.Phone = ''
 $settings.UsageLocation = 'US'
 $settings.DailyNotifications = $false
 
-New-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
+Set-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
 -OrganizationalUnits 'London', 'New York', 'Kuala Lumpur' `
 -Domains 'atwork-it.com', 'delegate365.com' `
 -D365Permission 'Scope Admin' `
