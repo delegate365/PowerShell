@@ -11,6 +11,8 @@ Administrators can be users in the same Office 365 tenant, or can be external us
 Optional, additional properties can be handed over to the command, see the example.
 The output shows the created admin object.
 
+To modify an existing administrator, see [Set-DAdministrator](./Set-DAdministrator.md) and [Delete-DAdministrator](./Delete-DAdministrator.md).
+
 ## Example
 ```powershell
 New-DAdministrator -UserPrincipalName 'john.doe@delegate365.com'
@@ -32,7 +34,7 @@ New-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
 -Settings $settings
 ```
 Additional parameters and settings can be set to the new user in one step. 
-You can assign multiple OUs and domains and separate them with a comma, as shown in this sample. Here, the new admin is assigned to the OU's 'New York' and 'Paris' and for managing users of the domains 'atwork-it.com' and 'delegate365.com'. As Permission policy, the name of the policy must be used, here 'Portal Admin'. Note: Without permission policy, the admin has no permissions in Delegate365, so this parameter is important. The defined settings are assigned by passing the $settings object to the New-DAdministrator command.
+You can assign multiple OUs and domains and separate them with a comma, as shown in this sample. Here, the new admin is assigned to the OU's 'Paris' and 'New York' and for managing users of the domains 'atwork-it.com' and 'delegate365.com'. As Permission policy, the name of the policy must be used, here 'Portal Admin'. Note: Without permission policy, the admin has no permissions in Delegate365, so this parameter is important. The defined settings are assigned by passing the $settings object to the New-DAdministrator command.
 
 ## Example
 See a sample using a CSV file [New-DAdministrator-List.csv](./Samples/New-DAdministrator-List.csv) as source for creating new admins at [New-DAdministrator-Sample.ps1](./Samples/New-DAdministrator-Sample.ps1).
