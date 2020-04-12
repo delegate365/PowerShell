@@ -1,9 +1,12 @@
 <# 
-New-DAdministrator-Sample.ps1
+New-DAdministrator
+.ps1
 A sample script to create new administrators in Delegate365 out of the file New-DAdministrator-List.csv.
 If an admin is already existing, no action is done. If he or she is not existing, the new admin gets created with the parameters.
 Note that the assigned Permission Policy "Scope Admins" and the OU's and domains should already exist, otherwise no assignment will happen.
 The new admin will be set Active=Yes and can login to the Delegate365 portal instantly.
+Use Connect-Delegate365 to connect to the Delegate365 API first, see 
+https://github.com/delegate365/PowerShell/blob/master/Samples/Connect.ps1
 #>
 
 # Define the delimiter use to separate OUs and Domains within a single CSV Column
