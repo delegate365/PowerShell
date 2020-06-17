@@ -21,6 +21,7 @@ $i=0
 foreach ($OU in $body.OrganizationalUnits) {
     $i++
     # To access the values, use the .ToString() function
+    $OU.Id.ToString()
     $OU.Name.ToString()
     # and use it in outputs as here
     Write-Host "$i. OU ID = $($OU.Id.ToString()), OU Name = $($OU.Name.ToString())"
