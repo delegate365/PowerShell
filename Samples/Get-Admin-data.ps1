@@ -12,6 +12,10 @@ Get-DAdmin -All
 $OneAdmin = "adelev@<mytenant>.onmicrosoft.com"
 $body = Get-DAdmin -Identity $OneAdmin
 
+# To access one specific (the first) item in the OU collection:
+$body.OrganizationalUnits[0].Id
+$body.OrganizationalUnits[0].Name
+
 # Loop through all OUs of that admin
 $i=0
 foreach ($OU in $body.OrganizationalUnits) {
