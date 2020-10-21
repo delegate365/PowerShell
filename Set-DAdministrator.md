@@ -1,7 +1,7 @@
 # Set-DAdministrator
 
 ## Synopsis
-Updates an existing administrator in Delegate365. ***This command is available from version Delegate365 v8.2***
+Updates an existing administrator in Delegate365 (available from Delegate365 v8.2 and up). Delegate365 v9.2 allows to set the GroupOU´s additionally.
 
 ## Description
 Set-DAdministrator modifies an existing administrator in Delegate365. Alias commands are: Set-DAdmin.
@@ -55,7 +55,7 @@ $settings.Phone = ''
 $settings.UsageLocation = 'US'
 $settings.DailyNotifications = $false
 
-Set-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
+Set-DAdministrator -Identity 'john.doe@delegate365.com' `
 -OrganizationalUnits 'London', 'New York', 'Kuala Lumpur' `
 -Domains 'atwork-it.com', 'delegate365.com' `
 -D365Permission 'Scope Admin' `
@@ -63,6 +63,14 @@ Set-DAdministrator -UserPrincipalName 'john.doe@delegate365.com' `
 ```
 Overwrite all possible settings of that admin.
 You can assign multiple OUs and domains and separate them with a comma, as shown in this sample. Here, the new admin is assigned to the OU's 'London', 'New York' and 'Kuala Lumpur' and for managing users of the domains 'atwork-it.com' and 'delegate365.com'. As Permission policy, the name of the policy must be used, here 'Portal Admin'. Note: Without permission policy, the admin has no permissions in Delegate365, so this parameter is important. The defined settings are assigned by passing the $settings object to the New-DAdministrator command.
+
+## Example
+```powershell
+Set-DAdministrator -Identity 'john.doe@delegate365.com' `
+-OrganizationalUnits 'London', 'New York' `
+-GroupOrganizationalUnits 'Kuala Lumpur', 'Paris'
+```
+Overwrite the OU assignment and the Group OU assignment of an existing administrator. The -GroupOrganizationalUnits parameter can be used starting with version Delegate365 v9.2 only. This allows to automate assigned Group OU´s as well. Again, pls. note that such OU assignments always overwrite existing assignments for the administrator.
 
 ## Example
 See another sample for creating new administrators that works with almost the same syntax at [New-DAdministrator-Sample.ps1](./Samples/New-DAdministrator-Sample.ps1).
