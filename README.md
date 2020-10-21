@@ -1,8 +1,8 @@
 # Delegate365 PowerShell
 
-Description of the PowerShell cmdlets for Delegate365 (v1.0.0.8). 
+Description of the PowerShell cmdlets for Delegate365 (v1.0.0.9). 
 
-**Note:** This Version will replace the former version 1.0.0.7 and will be available in the PowerShell Gallery by end of October 2020 along with the Delegate365 v9.2 update. This version is fully compatible with the previous version.
+**Note:** This Version will replace the former version 1.0.0.7 and is available in the PowerShell Gallery by end of October 2020 along with the Delegate365 v9.2 update. This version is fully compatible with the previous version.
 
 ## Synopsis
 
