@@ -92,6 +92,6 @@ Settings allow to set the notification email, phone number and other settings fo
 ### Parameter -D365Permission
 Defines the permission policy to be assigned to that admin. Without permission policy, the admin has no permission in Delegate365.
 ### Parameter -Active
-Active sets the Administrator active $true) or disabled ($false). Disabled Admins cannot access the Delegate365 portal or use PowerShell. 
+Active sets the Administrator active ($true) or disabled ($false). Disabled Admins cannot access the Delegate365 portal or use PowerShell. 
 
 Back to the [overview](https://github.com/delegate365/PowerShell).
