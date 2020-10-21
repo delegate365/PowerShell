@@ -2,8 +2,7 @@
 
 Description of the PowerShell cmdlets for Delegate365 (v1.0.0.8). 
 
-***Important:*** The Delegate365 version v1.0.0.7 is  available with Delegate365 v8.1 and above.
-Version 1.0.0.8 will replace the former verions and will be available in the PowerShell Gallery by end of October 2020 along with the Delegate365 v9.2 update. This version is fully compatible with the previous version.
+**Note:** This Version will replace the former version 1.0.0.7 and will be available in the PowerShell Gallery by end of October 2020 along with the Delegate365 v9.2 update. This version is fully compatible with the previous version.
 
 ## Synopsis
 
@@ -28,6 +27,8 @@ Use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your
 Execute ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command. Add -Examples as ***Get-Help command-name -examples*** for samples how to use a specific command. All Delegate365 commands have a **"D"**-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser](Get-DUser.md) for **Get-D**elegate365**User**. [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
 
 ## Basic usage
+
+To get more information how to use the Delegate365 PowerShell, see the article [Delegate365 PowerShell](https://blog.atwork.at/post/Delegate365-PowerShell) in our blog.
 
 ```powershell
 # Ensure that the module is loaded

@@ -6,14 +6,14 @@ Updates an existing administrator in Delegate365 (available from Delegate365 v8.
 ## Description
 Set-DAdministrator modifies an existing administrator in Delegate365. Alias commands are: Set-DAdmin.
 The administrator that shall be modified must be existing and must be set with the -Identity parameter.
-This command allows to enable or disable an Administrator, to overwrite his OU and domain settings and to define other admin settings.
+This command allows to enable or disable an Administrator, to overwrite his OU, GroupOU and domain settings and to define other admin settings.
 To remove any existing OU or domain assignments and the permission policy, use an empty string ''.
-Otherwise, use a string array to define new OU's or domains, as in the sample below.
+Otherwise, use a string array to define new OU's, GroupOU's or domains, as in the samples below.
 Optional, additional properties can be handed over to the command, see the example.
 The output shows the updated admin object.
 
 ***Note: Existing values are overwritten if used here.***
-So, if an admin has one OU 'Paris' assigned and you run _Set-DAdmin -Identity 'john.doe@delegate365.com' -OrganizationalUnits 'London', 'New York'_, that administrator will no longer be assigned to 'Paris'. Keep that in mind when using this command.
+So, if an admin has one OU 'Paris' assigned, and you run _Set-DAdmin -Identity 'john.doe@delegate365.com' -OrganizationalUnits 'London', 'New York'_, that administrator will no longer be assigned to 'Paris' (or to any GroupOU's). Keep that in mind when using this command.
 
 To delete an admin from Delegate365, see [Delete-DAdministrator](./Delete-DAdministrator.md).
 
@@ -82,6 +82,9 @@ Identity is the login name of the new admin and is required.
 The UserPrincipalName can be used instead of the Identity parameter.
 ### Parameter -OrganizationalUnits
 OrganizationalUnits can be a String Array, that can be separated by comma, e.g. 'Paris', 'New York'. Quoting is not necessary but common to avoid any conflicts when interpreting the data.
+### Parameter -GroupOrganizationalUnits
+GroupOrganizationalUnits can be a String Array, that can be separated by comma, e.g. 'Kuala Lumpur', 'Paris'. Quoting is not necessary but common to avoid any conflicts when interpreting the data.
+**Note:** This parameter is available from Delegate365 v9.2 and up only. Currently, the -GroupOrganizationalUnits Parameter can only be used together with the -OrganizationalUnits parameter. This means, you can not omit the -OrganizationalUnits, otherwise an error will occur.
 ### Parameter -Domains
 Domains can be a String Array, that can be separated by comma, e.g. 'atwork-it.com', 'delegate365.com'. Quoting is not necessary but common to avoid any conflicts when interpreting the data.
 ### Parameter -Settings
@@ -89,6 +92,6 @@ Settings allow to set the notification email, phone number and other settings fo
 ### Parameter -D365Permission
 Defines the permission policy to be assigned to that admin. Without permission policy, the admin has no permission in Delegate365.
 ### Parameter -Active
-Active sets the Administrator active ($true) or disabled ($false). Disabled Admins cannot access the Delegate365 portal or use PowerShell. 
+Active sets the Administrator active $true) or disabled ($false). Disabled Admins cannot access the Delegate365 portal or use PowerShell. 
 
 Back to the [overview](https://github.com/delegate365/PowerShell).
