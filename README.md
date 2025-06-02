@@ -11,13 +11,12 @@ Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution fo
 Delegate365 provides APIs and a PowerShell module to access data that is stored within the Delegate365 system.
 These cmdlets allow to read and write data from external systems into Delegate365. See also some samples in that directory.
 
-### Prerequisites
+## Prerequisites
 
 The **Delegate365 PowerShell module** is designed **exclusively for PowerShell Core** and is not compatible with Windows PowerShell (the older, Windows-only version). It provides a set of cmdlets to interact with the Delegate365 SaaS solution for managing Microsoft 365 tenants.
 
 PowerShell Core is cross-platform and runs on Windows, macOS, and Linux. **PowerShell Core** version **7.4 or higher** is required.
-
-- Install PowerShell Core from https://github.com/PowerShell/PowerShell/releases
+If not already installed, install PowerShell Core from https://github.com/PowerShell/PowerShell/releases.
 
 ## Installation
 
