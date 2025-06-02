@@ -2,26 +2,74 @@
 
 Description of the PowerShell cmdlets for Delegate365 (v1.0.0.9). 
 
-**Note:** This Version will replace the former version 1.0.0.7 and is available in the PowerShell Gallery by end of October 2020 along with the Delegate365 v9.2 update. This version is fully compatible with the previous version.
+**Note:** This Version will replace the former version 2.x and is available in the PowerShell Gallery along with the Delegate365 v10 update. The latest  version is required to operate with Delegate365 v10 and fully compatible with the previous version. Further updates will follow in the near future.
 
 ## Synopsis
 
-Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution for managing an Office 365 tenant offered by [atwork-it.com](https://www.atwork-it.com/). Delegate365 allows to split a single Office 365 tenant into smaller, manageable units. For more information about Delegate365, pls. see [delegate365.com](https://www.delegate365.com/).
+Delegate365 is an Add-On solution running in Microsoft Azure as SaaS solution for managing an Microsoft 365 tenant offered by [atwork-it.com](https://www.atwork-it.com/). Delegate365 allows to split a single Microsoft 365 tenant into smaller, manageable units. For more information about Delegate365, pls. see [delegate365.com](https://www.delegate365.com/).
 
 Delegate365 provides APIs and a PowerShell module to access data that is stored within the Delegate365 system.
 These cmdlets allow to read and write data from external systems into Delegate365. See also some samples in that directory.
 
+### Prerequisites
+
+The **Delegate365 PowerShell module** is designed **exclusively for PowerShell Core** and is not compatible with Windows PowerShell (the older, Windows-only version). It provides a set of cmdlets to interact with the Delegate365 SaaS solution for managing Microsoft 365 tenants.
+
+PowerShell Core is cross-platform and runs on Windows, macOS, and Linux. **PowerShell Core** version **7.4 or higher** is required.
+
+- Install PowerShell Core from https://github.com/PowerShell/PowerShell/releases
+
 ## Installation
 
-The Delegate365 module must be downloaded and installed once on a client computer from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET standard 2.0 library. To overwrite an existing Delegate365 PowerShell module with the latest version, add the -Force parameter.
+The Delegate365 module must be downloaded and installed once on a client computer from the [PowerShell Gallery](https://powershellgallery.com/packages/Delegate365/). The Delegate365 module can be used on any platform supporting the .NET Core library. PowerShell 7.4.x or later is required.  
+
+To install the Delegate365 PowerShell module for your current user run this PowerShell command. This installs the module only for the current user, without requiring admin rights. This is useful in environments where you don’t have admin privileges.
+
+### Install for your user (recommended)
 
 ```powershell
-Install-Module Delegate365 -Force
+Install-Module Delegate365 -Scope CurrentUser
 ```
 
-Once installed on a client machine, the Delegate365 commandlets can be used.
+### Install system-wide as computer administrator
 
-## Connect
+```powershell
+Install-Module Delegate365
+```
+
+To install the Delegate365 PowerShell module with the latest version, add the -Force parameter in both modes.
+
+### Check the installation
+
+Once installed on a client machine, the Delegate365 commandlets can be used. To check your installed modules depending on user or admin mode, check out the module in these paths:
+
+```powershell
+$env:PSModulePath -split ';'
+```
+
+This returns a result similar to this output:
+
+```powershell
+C:\Users\<your-username>\<Your-OneDrive>\Dokuments\PowerShell\Modules
+C:\Program Files\PowerShell\Modules
+c:\program files\powershell\7\Modules
+C:\Program Files\WindowsPowerShell\Modules
+C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+```
+
+When you install as a user with the -Scope CurrentUser parameter, your Delegate365 PowerShell module resides in your Users directory, e.g.:  
+C:\Users\<your-username>\<Your-OneDrive>\Dokuments\PowerShell\Modules\Delegate365\10.0.0.2
+
+### Update the module
+
+```powershell
+Update-Module Delegate365 -Scope CurrentUser -Force
+```
+
+Check out the updated files in your module path and the *$env* path variable (as above).  
+**If the module is not working properly, delete the *\Delegate365* directory in the modules directory, and run Install-Module Delegate365 again.**
+
+## Connect to Delegate365
 
 Use the [Connect-Delegate365](Connect-Delegate365.md) command to connect to your Delegate365 instance and use the cmdlets afterwards.
 Execute ***Get-Command -Module Delegate365*** to see a list of available commands in this module, or ***Get-Help command-name*** for information about a specific command. Add -Examples as ***Get-Help command-name -examples*** for samples how to use a specific command. All Delegate365 commands have a **"D"**-character (or the word Delegate365) included after the method to be not confusable with other PowerShell commands, e.g. [Get-DUser](Get-DUser.md) for **Get-D**elegate365**User**. [Disconnect-Delegate365](Disconnect-Delegate365.md) closes the connection.
@@ -46,19 +94,6 @@ Get-DUser -OU 'Seattle'
 # Close the session
 Disconnect-Delegate365
 ```
-
-### Prerequisites
-
-If you run ***Import-Module Delegate365*** and you get an error similar as 'Import-Module : Could not load file or assembly 'netstandard, Version2.0.0.0. ...', the corresponding Microsoft .NET Framework might not be installed on the client machine. The Delegate365 PowerShell module requires .NET Standard 2.0 which is supported on the following platforms and higher:
-
-- .NET Framework 4.6.1
-- .NET Core 2.0
-- Mono 5.4
-- Xamarin.iOS 10.14
-- Xamarin.Mac 3.8
-- Xamarin.Android 7.5
-
-If one of these .NET Frameworks (or higher) is not installad on the client machine, pls. install the framework. For Windows machines, install the .NET Standard 2.0 Framework (.NET 4.7.2 runtime) from (https://www.microsoft.com/net/download/thank-you/net472). Once the required .NET Framework is installed, the Delegate365 module will load as expected. .NET Framework supports multiple versions installed on the same machine side-by-side.
 
 ### Connect-Delegate365 -WebApiSasKey and -WebApiBaseUrl
 
