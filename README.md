@@ -65,8 +65,28 @@ C:\Users\<your-username>\<Your-OneDrive>\Dokuments\PowerShell\Modules\Delegate36
 Update-Module Delegate365 -Scope CurrentUser -Force
 ```
 
-Check out the updated files in your module path and the *$env* path variable (as above).  
-**If the module is not working properly, delete the *\Delegate365* directory in the modules directory, and run Install-Module Delegate365 again.**
+Check out the updated files in your module path and the *$env* path variable (as above).
+
+### Issues when updating
+
+Sometimes an update of a PowerShell module cannot be performed because of various reasons. If you run into such issues, check out the following tips:
+
+- Module is in use: If the module is loaded in the current session, PowerShell cannot overwrite the files.
+- Permission issues: If the module was installed system-wide (-Scope AllUsers), you may need admin rights to update it.
+- Multiple versions installed: PowerShell sometimes gets confused if multiple versions of the same module exist in different paths.
+- Corrupted or locked files: Antivirus software or file locks can prevent updates.
+- OneDrive sync conflicts: If your module path is inside a OneDrive-synced folder (like Documents\PowerShell\Modules), sync conflicts can block updates.
+
+### Workarounds when updating
+
+In such situations try these tips:
+
+- Before updating, make sure no session is using the module: Get-Module -Name ModuleName | Remove-Module -Force
+- Avoid system-wide installs.
+- Instead of using OneDrive-synced folders, consider setting a custom module path like: $env:PSModulePath += ";C:\PowerShell\Modules"
+- If you get conflicts with cmdlets from other modules: Use -AllowClobber
+
+**However, if the module is not working properly, the simplest solution is often to delete the \Delegate365 directory in the modules folder and run Install-Module Delegate365 again.**
 
 ## Connect to Delegate365
 
