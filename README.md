@@ -7,7 +7,7 @@ https://github.com/atworkat/Delegate365PowerShell
 
 ---
 
-# Delegate365 PowerShell
+## Delegate365 PowerShell
 
 Description of the PowerShell cmdlets for Delegate365 (v1.0.0.9).
 
