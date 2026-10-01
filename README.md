@@ -1,6 +1,15 @@
+# Repository Archived
+
+This repository is read-only and no longer receives updates.
+
+For the latest documentation, please use:  
+https://github.com/atworkat/Delegate365PowerShell
+
+---
+
 # Delegate365 PowerShell
 
-Description of the PowerShell cmdlets for Delegate365 (v1.0.0.9). 
+Description of the PowerShell cmdlets for Delegate365 (v1.0.0.9).
 
 **Note:** This Version will replace the former version 2.x and is available in the PowerShell Gallery along with the Delegate365 v10 update. The latest  version is required to operate with Delegate365 v10 and fully compatible with the previous version. Further updates will follow in the near future.
 
